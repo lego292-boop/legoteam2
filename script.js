@@ -4,6 +4,45 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---------- Theme (dark/light) ----------
+  // الوضع الافتراضي داكن. التفضيل بيتحفظ محليًا في متصفح الزائر بس
+  // (localStorage)، مفيش أي بيانات بترسل لأي سيرفر.
+  const savedTheme = localStorage.getItem('lego_theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const isLight = document.body.classList.contains('light-mode');
+      localStorage.setItem('lego_theme', isLight ? 'light' : 'dark');
+    });
+  }
+
+  // ---------- Cookie consent ----------
+  const cookieBanner = document.getElementById('cookie-banner');
+  if (cookieBanner) {
+    const consent = localStorage.getItem('lego_cookie_consent');
+    if (!consent) {
+      setTimeout(() => cookieBanner.classList.add('show'), 1200);
+    }
+    const acceptBtn = document.getElementById('cookie-accept');
+    const rejectBtn = document.getElementById('cookie-reject');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('lego_cookie_consent', 'accepted');
+        cookieBanner.classList.remove('show');
+      });
+    }
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => {
+        localStorage.setItem('lego_cookie_consent', 'rejected');
+        cookieBanner.classList.remove('show');
+      });
+    }
+  }
+
   // ---------- Init AOS (scroll animations) ----------
   if (window.AOS) {
     AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
