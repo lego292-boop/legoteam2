@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-domain.example.com/</loc>
+    <loc>https://legoteam2.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://your-domain.example.com/blog.html</loc>
+    <loc>https://legoteam2.vercel.app/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-domain.example.com/blog/pentest-basics.html</loc>
+    <loc>https://legoteam2.vercel.app/blog/pentest-basics.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.example.com/blog/password-security.html</loc>
+    <loc>https://legoteam2.vercel.app/blog/password-security.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://your-domain.example.com/blog/phishing-awareness.html</loc>
+    <loc>https://legoteam2.vercel.app/blog/phishing-awareness.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
