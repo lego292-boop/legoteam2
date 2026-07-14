@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | الصفحة غير موجودة - Team LEGO</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Orbitron:wght@500;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .error-code {
+            font-family: var(--font-en);
+            font-weight: 900;
+            font-size: clamp(6rem, 20vw, 11rem);
+            color: transparent;
+            -webkit-text-stroke: 2px var(--main-red);
+            line-height: 1;
+            text-shadow: 0 0 40px rgba(255, 0, 0, 0.35);
+            letter-spacing: 6px;
+        }
+        .error-terminal {
+            font-family: var(--font-en);
+            color: #888;
+            font-size: 14px;
+            margin: 18px 0 30px;
+            direction: ltr;
+        }
+        .error-terminal .cursor-blink {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: var(--main-red);
+            margin-right: 4px;
+            animation: blinkCursor 1s step-end infinite;
+            vertical-align: middle;
+        }
+        @keyframes blinkCursor { 50% { opacity: 0; } }
+        .error-title { color: #fff; font-size: 1.6rem; margin-bottom: 12px; }
+        .error-desc { color: var(--text-gray); max-width: 480px; margin-bottom: 34px; }
+        .error-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    </style>
+</head>
+
+<body>
+    <div class="error-wrap">
+        <canvas id="particleCanvas" style="position:absolute; inset:0; width:100%; height:100%;"></canvas>
+        <div style="position:relative; z-index:2;">
+            <div class="error-code">404</div>
+            <div class="error-terminal">root@legoteam:~$ locate page<span class="cursor-blink"></span><br>
+                Error: Path not found in system index.</div>
+            <h1 class="error-title">الصفحة اللي بتدور عليها مش موجودة</h1>
+            <p class="error-desc">يمكن اتنقلت أو اتحذفت، أو الرابط مكتوب غلط. تقدر ترجع للرئيسية أو تتواصل معانا لو
+                فيه مشكلة.</p>
+            <div class="error-actions">
+                <a href="index.html" class="btn-main">العودة للرئيسية</a>
+                <a href="index.html#contact" class="btn-main"
+                    style="background:transparent; border:1.5px solid var(--main-red);">تواصل معنا</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
