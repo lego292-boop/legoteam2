@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /legal.html
 
-Sitemap: https://your-domain.example.com/sitemap.xml
+Sitemap: https://legoteam2.vercel.app/sitemap.xml
